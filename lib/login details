@@ -1,0 +1,13 @@
+LOGIN PASSWORD
+
+username: 'admin', password: 'adminpass', userType: UserType.admin
+username: 'master', password: 'masterpass', userType: UserType.masters
+username: 'employee1', password: 'emp1pass', userType: UserType.employee
+username: 'employee2', password: 'emp2pass', userType: UserType.employee
+
+
+UserData (for employee)
+id: "1” name: "name1 id: "2", name: "name id: "3", name: "name3", id: "4", name: "name4
+", pin: "1234", ", pin: "567",
+pin: "12345",
+", pin: "123457",
