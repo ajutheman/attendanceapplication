@@ -1,10 +1,10 @@
 // masters_page.dart
 import 'package:flutter/material.dart';
 
+import '../Modle/User_data_modle.dart';
+import '../Modle/userData.dart';
+import '../loginScren.dart';
 import 'EmployeeDetailPage.dart';
-import 'LoginPage.dart';
-import 'User_data_modle.dart';
-import 'userData.dart';
 
 class MastersPage extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class MastersPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.grey,
           size: 26.0,
         ),
@@ -23,9 +23,9 @@ class MastersPage extends StatelessWidget {
           onPressed: () {
             // Navigate to the login page
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => LoginPage(),
-              ),
+              MaterialPageRoute(builder: (context) => home()
+                  // LoginPage(),
+                  ),
             );
           },
         ),

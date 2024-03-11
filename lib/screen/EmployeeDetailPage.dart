@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Modle/User_data_modle.dart';
 import 'MastersPage.dart';
-import 'User_data_modle.dart';
 
 class EmployeeDetailPage extends StatelessWidget {
   final UserDataModel user;

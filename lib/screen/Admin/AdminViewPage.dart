@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:untitled9/userData.dart';
+import 'package:untitled9/Modle/userData.dart';
 
-import 'LoginPage.dart';
-import 'User_data_modle.dart';
+import '../../Modle/User_data_modle.dart';
+import '../../loginScren.dart';
 
 class AdminViewPage extends StatefulWidget {
   @override
@@ -27,7 +27,8 @@ class _AdminViewPageState extends State<AdminViewPage> {
             // Navigate to the login page
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
-                builder: (context) => LoginPage(),
+                builder: (context) => home(),
+                // LoginPage(),
               ),
             );
           },
@@ -37,7 +38,11 @@ class _AdminViewPageState extends State<AdminViewPage> {
         length: 3,
         child: Column(
           children: [
+            SizedBox(height: 10),
             TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.black,
               tabs: [
                 Tab(text: 'Live Attendees'),
                 Tab(text: 'Monthly Attendance'),
@@ -78,18 +83,31 @@ class LiveAttendeesTab extends StatelessWidget {
           statusColor = Colors.orange; // Orange for 'Late'
         }
 
-        return ListTile(
-          title: Text(
-            userData.name,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          leading: Icon(Icons.account_circle_rounded, color: statusColor),
-          subtitle: Text(
-            'Status: ${userData.status}',
-            style: TextStyle(
-              color: statusColor,
+        return Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Card(
+            child: ListTile(
+              onTap: () {
+                // Navigate to user detail page
+                // You can implement this functionality
+              },
+              title: Text(
+                userData.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              leading: CircleAvatar(
+                backgroundColor: statusColor,
+                child: Icon(Icons.account_circle_rounded, color: Colors.white),
+              ),
+              subtitle: Text(
+                'Status: ${userData.status}  pin:${userData.pin}',
+                style: TextStyle(
+                  color: statusColor,
+                ),
+              ),
+              // tileColor: statusColor,
             ),
           ),
         );
@@ -109,9 +127,11 @@ class MonthlyReportTab extends StatelessWidget {
       itemCount: Userdata.userdatalist.length,
       itemBuilder: (context, index) {
         UserDataModel userData = Userdata.userdatalist[index];
-        return ListTile(
-          title: Text(userData.name),
-          subtitle: Text('$reportType: ${userData.workingDays} days'),
+        return Card(
+          child: ListTile(
+            title: Text(userData.name),
+            subtitle: Text('$reportType: ${userData.workingDays} days'),
+          ),
         );
       },
     );

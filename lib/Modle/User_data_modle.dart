@@ -1,13 +1,13 @@
 class UserDataModel {
-  final String id;
-  final String name;
+  late final String id;
+  late final String name;
   String imageUrl;
   String status;
-  final String pin;
+  late final String pin;
   int? workingDays;
-  final String contactInformation; // Updated naming convention
-  final String officeTiming; // Updated naming convention
-  final String designation;
+  late final String contactInformation; // Updated naming convention
+  late final String officeTiming; // Updated naming convention
+  late final String designation;
   UserDataModel({
     required this.id,
     required this.name,
