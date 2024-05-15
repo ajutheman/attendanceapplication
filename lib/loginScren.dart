@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:untitled9/screen/Admin/AttendancePage.dart';
 import 'package:untitled9/screen/Branch_page.dart';
-import 'package:untitled9/screen/CompanySignUpPage.dart';
+import 'package:untitled9/screen/CompanySignUpPage/CompanySignUpPage.dart';
 import 'package:untitled9/screen/PasswordResetPage.dart';
 
 class home extends StatefulWidget {
@@ -41,7 +41,7 @@ class _homeState extends State<home> {
   }
 
   Widget buildTabletDesktopLayout() {
-    return Scaffold(
+    return Scaffold( 
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,

@@ -5,8 +5,8 @@ import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../Modle/User_data_modle.dart';
-import '../Modle/userData.dart';
+import '../../Modle/User_data_modle.dart';
+import '../../Modle/userData.dart';
 
 class CompanySignUpPage extends StatefulWidget {
   @override

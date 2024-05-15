@@ -7,21 +7,6 @@ import '../Modle/User_data_modle.dart';
 import '../Modle/userData.dart';
 import 'Admin/ViewAttendance.dart';
 
-// class CustomIcon {
-//   final String svgPath;
-//   final String label;
-//
-//   CustomIcon({required this.svgPath, required this.label});
-// }
-//
-// List<CustomIcon> customIcons = [
-//   CustomIcon(svgPath: 'assets/icons/icon1.svg', label: 'Icon 1'),
-//   CustomIcon(svgPath: 'assets/icons/icon2.svg', label: 'Icon 2'),
-//   CustomIcon(svgPath: 'assets/icons/icon3.svg', label: 'Icon 3'),
-//   CustomIcon(svgPath: 'assets/icons/icon3.svg', label: 'Icon 3'),
-//   // Add more custom icons as needed
-// ];
-
 enum AttendanceOption {
   CheckIn,
   CheckOut,
@@ -54,29 +39,6 @@ final List<Widget> optionIcons = [
   // Add more icons or images here
 ];
 
-// class CustomIcon {
-//   final String imagePath;
-//   final String label;
-//
-//   CustomIcon({required this.imagePath, required this.label});
-// }
-
-// List<CustomIcon> customIcons = [
-//   CustomIcon(imagePath: 'assets/icons/icon1.png', label: 'Icons.home'),
-//   CustomIcon(imagePath: 'assets/icons/icon2.png', label: 'Icons.work)'),
-//   CustomIcon(imagePath: 'assets/icons/icon3.png', label: 'Icons.school'),
-//   CustomIcon(imagePath: 'assets/icons/icon3.png', label: 'Icons.favorite'),
-//   // Add more custom icons as needed
-// ];
-
-// Alternatively, you can use AssetImage for images:
-// final List<Widget> optionImages = [
-//   Image.asset('assets/home.png'),
-//   Image.asset('assets/work.png'),
-//   Image.asset('assets/school.png'),
-//   Image.asset('assets/favorite.png'),
-//   // Add more images here
-// ];
 class AttendancePagemark extends StatefulWidget {
   @override
   _AttendancePagemarkState createState() => _AttendancePagemarkState();
@@ -118,73 +80,6 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: Row(
-              //     children: [
-              //       Container(
-              //         margin: EdgeInsets.symmetric(vertical: 10.0),
-              //         padding: EdgeInsets.all(10.0),
-              //         // decoration: BoxDecoration(
-              //         //   borderRadius: BorderRadius.circular(15.0),
-              //         //   border: Border.all(
-              //         //     color: Colors.black,
-              //         //   ),
-              //         // ),
-              //         child: DropdownButton<UserDataModel>(
-              //           value: selectedEmployee,
-              //           icon: const Icon(
-              //             Icons.arrow_drop_down,
-              //           ),
-              //           iconSize: 50,
-              //           elevation: 27,
-              //           style: const TextStyle(color: Colors.deepPurple),
-              //           underline: Container(
-              //             height: 2,
-              //             color: Colors.greenAccent,
-              //           ),
-              //           borderRadius: BorderRadius.circular(2),
-              //           focusColor: Colors.greenAccent,
-              //           hint: Text("Select from the list",
-              //               style: TextStyle(fontWeight: FontWeight.bold)),
-              //           onChanged: (UserDataModel? newValue) {
-              //             setState(() {
-              //               selectedEmployee = newValue;
-              //             });
-              //           },
-              //           items: userdatalist.map((UserDataModel userData) {
-              //             return DropdownMenuItem<UserDataModel>(
-              //               value: userData,
-              //               child: Padding(
-              //                 padding: EdgeInsets.symmetric(vertical: 8.0),
-              //                 child: Text(
-              //                   userData.name,
-              //                   style: TextStyle(fontSize: 16),
-              //                 ),
-              //               ),
-              //             );
-              //           }).toList(),
-              //         ),
-              //       ),
-              //       SizedBox(width: 12),
-              //       DropdownButton<AttendanceOption>(
-              //         value: selectedOption,
-              //         hint: Text("Select  "),
-              //         onChanged: (AttendanceOption? newValue) {
-              //           setState(() {
-              //             selectedOption = newValue;
-              //           });
-              //         },
-              //         items: AttendanceOption.values.map((option) {
-              //           return DropdownMenuItem<AttendanceOption>(
-              //             value: option,
-              //             child: Text(option.toString().split('.').last),
-              //           );
-              //         }).toList(),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -202,12 +97,6 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 10.0),
                         padding: EdgeInsets.all(10.0),
-                        // decoration: BoxDecoration(
-                        //   borderRadius: BorderRadius.circular(15.0),
-                        //   border: Border.all(
-                        //     color: Colors.black,
-                        //   ),
-                        // ),
                         child: DropdownButton<UserDataModel>(
                           value: selectedEmployee,
                           icon: const Icon(
@@ -216,10 +105,6 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
                           iconSize: 26,
                           elevation: 7,
                           style: const TextStyle(color: Colors.deepPurple),
-                          // underline: Container(
-                          //   height: 1,
-                          //   color: Colors.transparent,
-                          // ),
                           borderRadius: BorderRadius.circular(2),
                           focusColor: Colors.greenAccent,
                           hint: Text("Select from the list",
@@ -273,57 +158,6 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
                   ],
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.stretch,
-              //     children: [
-              //       GridView.count(
-              //         crossAxisCount: 4, // Number of columns in the grid
-              //         crossAxisSpacing: 10.0,
-              //         mainAxisSpacing: 10.0,
-              //         shrinkWrap: true,
-              //         children: customIcons.map((icon) {
-              //           return GestureDetector(
-              //             onTap: () {
-              //               // Handle icon selection
-              //             },
-              //             child: Container(
-              //               decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(15.0),
-              //                 border: Border.all(
-              //                   color: Colors.grey,
-              //                 ),
-              //               ),
-              //               padding: EdgeInsets.all(10.0),
-              //               child: Column(
-              //                 mainAxisAlignment: MainAxisAlignment.center,
-              //                 children: [
-              //                   // Custom PNG icon images
-              //                   Image.asset(
-              //                     icon.imagePath,
-              //                     width:
-              //                         50, // Adjust the size of the icon as needed
-              //                     height: 40,
-              //                   ),
-              //                   SizedBox(height: 5),
-              //                   Text(
-              //                     icon.label,
-              //                     style: TextStyle(
-              //                       fontSize: 10,
-              //                       fontWeight: FontWeight.bold,
-              //                       color: Colors.black,
-              //                     ),
-              //                   ),
-              //                 ],
-              //               ),
-              //             ),
-              //           );
-              //         }).toList(),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridView.count(
@@ -395,9 +229,7 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
                   }).toList(),
                 ),
               ),
-
               SizedBox(height: 2),
-
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Center(
@@ -420,9 +252,7 @@ class _AttendancePagemarkState extends State<AttendancePagemark> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
-
               SizedBox(height: 20),
               if (capturedImage != null)
                 Container(
